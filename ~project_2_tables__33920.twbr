@@ -1,0 +1,1157 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20233.23.1227.1336                               -->
+<workbook original-version='18.1' source-build='2023.3.1 (20233.23.1227.1336)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='Crosstable' inline='true' name='federated.14oy9ds1m1ajhp13q98ft1t31o0j' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='control_group' name='textscan.0jqtmc01cvuz7z12s4dyj0an2xwu'>
+            <connection class='textscan' directory='C:/Users/baort/Documents/Ironhack/Project_2/vanguard-ab-test/src/notebooks' filename='control_group.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='test_group' name='textscan.1t4ot970atrkjg11y0dtv1trydky'>
+            <connection class='textscan' directory='C:/Users/baort/Documents/Ironhack/Project_2/vanguard-ab-test/src/notebooks' filename='test_group.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.1t4ot970atrkjg11y0dtv1trydky' name='df_ab.csv' table='[df_ab#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='client_id' ordinal='0' />
+            <column datatype='real' name='clnt_tenure_yr' ordinal='1' />
+            <column datatype='real' name='clnt_tenure_mnth' ordinal='2' />
+            <column datatype='real' name='clnt_age' ordinal='3' />
+            <column datatype='string' name='gendr' ordinal='4' />
+            <column datatype='real' name='num_accts' ordinal='5' />
+            <column datatype='real' name='bal' ordinal='6' />
+            <column datatype='real' name='calls_6_mnth' ordinal='7' />
+            <column datatype='real' name='logons_6_mnth' ordinal='8' />
+            <column datatype='string' name='Variation' ordinal='9' />
+            <column datatype='string' name='visitor_id' ordinal='10' />
+            <column datatype='string' name='visit_id' ordinal='11' />
+            <column datatype='string' name='process_step' ordinal='12' />
+            <column datatype='datetime' name='date_time' ordinal='13' />
+            <column datatype='datetime' name='first_time' ordinal='14' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.1t4ot970atrkjg11y0dtv1trydky' name='df_ab.csv' table='[df_ab#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='client_id' ordinal='0' />
+            <column datatype='real' name='clnt_tenure_yr' ordinal='1' />
+            <column datatype='real' name='clnt_tenure_mnth' ordinal='2' />
+            <column datatype='real' name='clnt_age' ordinal='3' />
+            <column datatype='string' name='gendr' ordinal='4' />
+            <column datatype='real' name='num_accts' ordinal='5' />
+            <column datatype='real' name='bal' ordinal='6' />
+            <column datatype='real' name='calls_6_mnth' ordinal='7' />
+            <column datatype='real' name='logons_6_mnth' ordinal='8' />
+            <column datatype='string' name='Variation' ordinal='9' />
+            <column datatype='string' name='visitor_id' ordinal='10' />
+            <column datatype='string' name='visit_id' ordinal='11' />
+            <column datatype='string' name='process_step' ordinal='12' />
+            <column datatype='datetime' name='date_time' ordinal='13' />
+            <column datatype='datetime' name='first_time' ordinal='14' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[df_ab.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>client_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[client_id]</local-name>
+            <parent-name>[df_ab.csv]</parent-name>
+            <remote-alias>client_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_ab.csv_083FD8C9FC5E48DE85DC69EB25A420A9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>clnt_tenure_yr</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[clnt_tenure_yr]</local-name>
+            <parent-name>[df_ab.csv]</parent-name>
+            <remote-alias>clnt_tenure_yr</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_ab.csv_083FD8C9FC5E48DE85DC69EB25A420A9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>clnt_tenure_mnth</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[clnt_tenure_mnth]</local-name>
+            <parent-name>[df_ab.csv]</parent-name>
+            <remote-alias>clnt_tenure_mnth</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_ab.csv_083FD8C9FC5E48DE85DC69EB25A420A9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>clnt_age</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[clnt_age]</local-name>
+            <parent-name>[df_ab.csv]</parent-name>
+            <remote-alias>clnt_age</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_ab.csv_083FD8C9FC5E48DE85DC69EB25A420A9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gendr</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[gendr]</local-name>
+            <parent-name>[df_ab.csv]</parent-name>
+            <remote-alias>gendr</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_ab.csv_083FD8C9FC5E48DE85DC69EB25A420A9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>num_accts</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[num_accts]</local-name>
+            <parent-name>[df_ab.csv]</parent-name>
+            <remote-alias>num_accts</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_ab.csv_083FD8C9FC5E48DE85DC69EB25A420A9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bal</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[bal]</local-name>
+            <parent-name>[df_ab.csv]</parent-name>
+            <remote-alias>bal</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_ab.csv_083FD8C9FC5E48DE85DC69EB25A420A9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>calls_6_mnth</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[calls_6_mnth]</local-name>
+            <parent-name>[df_ab.csv]</parent-name>
+            <remote-alias>calls_6_mnth</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_ab.csv_083FD8C9FC5E48DE85DC69EB25A420A9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>logons_6_mnth</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[logons_6_mnth]</local-name>
+            <parent-name>[df_ab.csv]</parent-name>
+            <remote-alias>logons_6_mnth</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_ab.csv_083FD8C9FC5E48DE85DC69EB25A420A9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Variation</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Variation]</local-name>
+            <parent-name>[df_ab.csv]</parent-name>
+            <remote-alias>Variation</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_ab.csv_083FD8C9FC5E48DE85DC69EB25A420A9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>visitor_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[visitor_id]</local-name>
+            <parent-name>[df_ab.csv]</parent-name>
+            <remote-alias>visitor_id</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_ab.csv_083FD8C9FC5E48DE85DC69EB25A420A9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>visit_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[visit_id]</local-name>
+            <parent-name>[df_ab.csv]</parent-name>
+            <remote-alias>visit_id</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_ab.csv_083FD8C9FC5E48DE85DC69EB25A420A9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>process_step</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[process_step]</local-name>
+            <parent-name>[df_ab.csv]</parent-name>
+            <remote-alias>process_step</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_ab.csv_083FD8C9FC5E48DE85DC69EB25A420A9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date_time</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[date_time]</local-name>
+            <parent-name>[df_ab.csv]</parent-name>
+            <remote-alias>date_time</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_ab.csv_083FD8C9FC5E48DE85DC69EB25A420A9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>first_time</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[first_time]</local-name>
+            <parent-name>[df_ab.csv]</parent-name>
+            <remote-alias>first_time</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_ab.csv_083FD8C9FC5E48DE85DC69EB25A420A9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='VisitorID percent total' datatype='real' default-format='p0.00%' name='[Calculation1]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNTD([visitor_id]) / TOTAL(COUNTD([visitor_id]))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Client ID percent total' datatype='real' default-format='p0.00%' name='[Calculation2]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNTD([client_id]) / TOTAL(COUNTD([client_id]))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Test Confirm Percentage' datatype='real' name='[Calculation_2386907848024244225]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF [Variation] = &apos;test&apos; AND [process_step] = &apos;confirm&apos; THEN 1 ELSE 0 END) / SUM(IF [Variation] = &apos;test&apos; THEN 1 ELSE 0 END)' />
+      </column>
+      <column caption='Control Confirm Percentage ' datatype='real' name='[Test Confirm Percentage (copy)_2386907848027115522]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF [Variation] = &apos;control&apos; AND [process_step] = &apos;confirm&apos; THEN 1 ELSE 0 END) / SUM(IF [Variation] = &apos;control&apos; THEN 1 ELSE 0 END)' />
+      </column>
+      <column datatype='string' name='[Variation]' role='dimension' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='df_ab.csv' datatype='table' name='[__tableau_internal_object_id__].[df_ab.csv_083FD8C9FC5E48DE85DC69EB25A420A9]' role='measure' type='quantitative' />
+      <column caption='Bal' datatype='real' name='[bal]' role='measure' type='quantitative' />
+      <column caption='Calls 6 Mnth' datatype='real' name='[calls_6_mnth]' role='measure' type='quantitative' />
+      <column caption='Client Id' datatype='integer' name='[client_id]' role='dimension' type='ordinal' />
+      <column caption='Clnt Age' datatype='real' name='[clnt_age]' role='measure' type='quantitative' />
+      <column caption='Clnt Tenure Mnth' datatype='real' name='[clnt_tenure_mnth]' role='measure' type='quantitative' />
+      <column caption='Clnt Tenure Yr' datatype='real' name='[clnt_tenure_yr]' role='dimension' type='quantitative' />
+      <column caption='Date Time' datatype='datetime' name='[date_time]' role='dimension' type='ordinal' />
+      <column caption='First Time' datatype='datetime' name='[first_time]' role='dimension' type='ordinal' />
+      <column caption='Gendr' datatype='string' name='[gendr]' role='dimension' type='nominal' />
+      <column caption='Logons 6 Mnth' datatype='real' name='[logons_6_mnth]' role='measure' type='quantitative' />
+      <column caption='Num Accts' datatype='real' name='[num_accts]' role='measure' type='quantitative' />
+      <column caption='Process Step' datatype='string' name='[process_step]' role='dimension' type='nominal' />
+      <column caption='Visit Id' datatype='string' name='[visit_id]' role='dimension' type='nominal' />
+      <column caption='Visitor Id' datatype='string' name='[visitor_id]' role='dimension' type='nominal' />
+      <column-instance column='[clnt_age]' derivation='Avg' name='[avg:clnt_age:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[client_id]' derivation='Count' name='[cnt:client_id:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[client_id]' derivation='CountD' name='[ctd:client_id:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[visitor_id]' derivation='CountD' name='[ctd:visitor_id:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[client_id]' derivation='Count' name='[cum:cnt:client_id:qk:2]' pivot='key' type='quantitative'>
+        <table-calc aggregation='Sum' ordering-field='[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[process_step]' ordering-type='Field' type='CumTotal' />
+      </column-instance>
+      <column-instance column='[client_id]' derivation='Count' name='[cum:cnt:client_id:qk]' pivot='key' type='quantitative'>
+        <table-calc aggregation='Sum' ordering-type='Rows' type='CumTotal' />
+      </column-instance>
+      <column-instance column='[client_id]' derivation='CountD' name='[diff:ctd:client_id:qk]' pivot='key' type='quantitative'>
+        <table-calc diff-options='Relative' ordering-type='Rows' type='Difference'>
+          <address>
+            <value>-1</value>
+          </address>
+        </table-calc>
+      </column-instance>
+      <column-instance column='[Variation]' derivation='None' name='[none:Variation:nk]' pivot='key' type='nominal' />
+      <column-instance column='[gendr]' derivation='None' name='[none:gendr:nk]' pivot='key' type='nominal' />
+      <column-instance column='[process_step]' derivation='None' name='[none:process_step:nk]' pivot='key' type='nominal' />
+      <column-instance column='[client_id]' derivation='Count' name='[pcdf:cnt:client_id:qk]' pivot='key' type='quantitative'>
+        <table-calc diff-options='Relative' ordering-type='Rows' type='PctDiff'>
+          <address>
+            <value>-1</value>
+          </address>
+        </table-calc>
+      </column-instance>
+      <column-instance column='[client_id]' derivation='CountD' name='[pcdf:ctd:client_id:qk]' pivot='key' type='quantitative'>
+        <table-calc diff-options='Relative' ordering-type='Rows' type='PctDiff'>
+          <address>
+            <value>-1</value>
+          </address>
+        </table-calc>
+      </column-instance>
+      <column-instance column='[client_id]' derivation='Count' name='[pcrk:cnt:client_id:qk]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='Rows' rank-options='Competition,Ascending' type='PctRank' />
+      </column-instance>
+      <column-instance column='[client_id]' derivation='Count' name='[pcto:cnt:client_id:qk:2]' pivot='key' type='quantitative'>
+        <table-calc ordering-field='[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[process_step]' ordering-type='Field' type='PctTotal' />
+      </column-instance>
+      <column-instance column='[client_id]' derivation='Count' name='[pcto:cnt:client_id:qk:3]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='CellInPane' type='PctTotal' />
+      </column-instance>
+      <column-instance column='[client_id]' derivation='Count' name='[pcto:cnt:client_id:qk:4]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='Table' type='PctTotal' />
+      </column-instance>
+      <column-instance column='[client_id]' derivation='Count' name='[pcto:cnt:client_id:qk:5]' pivot='key' type='quantitative'>
+        <table-calc ordering-field='[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[none:Variation:nk]' ordering-type='Field' type='PctTotal' />
+      </column-instance>
+      <column-instance column='[client_id]' derivation='Count' name='[pcto:cnt:client_id:qk]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='Rows' type='PctTotal' />
+      </column-instance>
+      <column-instance column='[client_id]' derivation='CountD' name='[pcto:ctd:client_id:qk]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='Rows' type='PctTotal' />
+      </column-instance>
+      <column-instance column='[visitor_id]' derivation='CountD' name='[pcto:ctd:visitor_id:qk:1]' pivot='key' type='quantitative'>
+        <table-calc ordering-field='[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[none:process_step:nk]' ordering-type='Field' type='PctTotal' />
+      </column-instance>
+      <column-instance column='[bal]' derivation='Sum' name='[sum:bal:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[calls_6_mnth]' derivation='Sum' name='[sum:calls_6_mnth:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[clnt_age]' derivation='Sum' name='[sum:clnt_age:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[clnt_tenure_mnth]' derivation='Sum' name='[sum:clnt_tenure_mnth:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[logons_6_mnth]' derivation='Sum' name='[sum:logons_6_mnth:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[num_accts]' derivation='Sum' name='[sum:num_accts:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[first_time]' derivation='Year-Trunc' name='[tyr:first_time:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[Calculation2]' derivation='User' name='[usr:Calculation2:qk]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='Rows' />
+      </column-instance>
+      <group hidden='true' name='[Exclusions (Gendr,Process Step,YEAR(First Time))]' name-style='unqualified' user:auto-column='exclude'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[none:gendr:nk]' />
+          <groupfilter function='level-members' level='[none:process_step:nk]' />
+          <groupfilter function='level-members' level='[tyr:first_time:ok]' />
+        </groupfilter>
+      </group>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[cnt:client_id:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[cum:cnt:client_id:qk:2]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[cum:cnt:client_id:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[pcdf:cnt:client_id:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[pcrk:cnt:client_id:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[pcto:cnt:client_id:qk:2]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[pcto:cnt:client_id:qk:3]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[pcto:cnt:client_id:qk:4]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[pcto:cnt:client_id:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[pcto:ctd:visitor_id:qk:1]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[sum:Control:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[sum:num_accts:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[sum:bal:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.14oy9ds1m1ajhp13q98ft1t31o0j]&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[__tableau_internal_object_id__].[cnt:df_ab.csv_3C62E78CC0D14658BB2D88D259A39F68:qk]&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[avg:clnt_age:qk]&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[sum:clnt_age:qk]&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[sum:logons_6_mnth:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[ctd:visitor_id:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[sum:Test:qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[sum:calls_6_mnth:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[__tableau_internal_object_id__].[cnt:Crosstable.csv_B2C99DB9125C4439A70EAE491F63A129:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[ctd:client_id:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[diff:ctd:client_id:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[none:process_step:nk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[pcdf:ctd:client_id:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[pcto:cnt:client_id:qk:5]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[pcto:ctd:client_id:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[usr:Calculation2:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[usr:Calculation3:qk]&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[sum:clnt_tenure_mnth:qk]&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:process_step:nk]' palette='blue_10_0' type='palette'>
+            <map to='#2a5783'>
+              <bucket>&quot;confirm&quot;</bucket>
+            </map>
+            <map to='#43719f'>
+              <bucket>&quot;step_3&quot;</bucket>
+            </map>
+            <map to='#4878a6'>
+              <bucket>&quot;step_2&quot;</bucket>
+            </map>
+            <map to='#79aacf'>
+              <bucket>&quot;step_1&quot;</bucket>
+            </map>
+            <map to='#b9ddf1'>
+              <bucket>&quot;start&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:gendr:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;F&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;X&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;U&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;M&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='df_ab.csv' id='df_ab.csv_083FD8C9FC5E48DE85DC69EB25A420A9'>
+            <properties context=''>
+              <relation connection='textscan.1t4ot970atrkjg11y0dtv1trydky' name='df_ab.csv' table='[df_ab#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='client_id' ordinal='0' />
+                  <column datatype='real' name='clnt_tenure_yr' ordinal='1' />
+                  <column datatype='real' name='clnt_tenure_mnth' ordinal='2' />
+                  <column datatype='real' name='clnt_age' ordinal='3' />
+                  <column datatype='string' name='gendr' ordinal='4' />
+                  <column datatype='real' name='num_accts' ordinal='5' />
+                  <column datatype='real' name='bal' ordinal='6' />
+                  <column datatype='real' name='calls_6_mnth' ordinal='7' />
+                  <column datatype='real' name='logons_6_mnth' ordinal='8' />
+                  <column datatype='string' name='Variation' ordinal='9' />
+                  <column datatype='string' name='visitor_id' ordinal='10' />
+                  <column datatype='string' name='visit_id' ordinal='11' />
+                  <column datatype='string' name='process_step' ordinal='12' />
+                  <column datatype='datetime' name='date_time' ordinal='13' />
+                  <column datatype='datetime' name='first_time' ordinal='14' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Control Step Rates'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Crosstable' name='federated.14oy9ds1m1ajhp13q98ft1t31o0j' />
+          </datasources>
+          <datasource-dependencies datasource='federated.14oy9ds1m1ajhp13q98ft1t31o0j'>
+            <column caption='Client ID percent total' datatype='real' default-format='p0.00%' name='[Calculation2]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([client_id]) / TOTAL(COUNTD([client_id]))'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='string' name='[Variation]' role='dimension' type='nominal' />
+            <column caption='Client Id' datatype='integer' name='[client_id]' role='dimension' type='ordinal' />
+            <column-instance column='[client_id]' derivation='CountD' name='[ctd:client_id:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Variation]' derivation='None' name='[none:Variation:nk]' pivot='key' type='nominal' />
+            <column-instance column='[process_step]' derivation='None' name='[none:process_step:nk]' pivot='key' type='nominal' />
+            <column caption='Process Step' datatype='string' name='[process_step]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation2]' derivation='User' name='[usr:Calculation2:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[none:Variation:nk]'>
+            <groupfilter function='member' level='[none:Variation:nk]' member='&quot;Control&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[none:Variation:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[ctd:client_id:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[ctd:client_id:qk]' />
+              <size column='[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[ctd:client_id:qk]' />
+              <text column='[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[none:process_step:nk]' />
+              <text column='[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[usr:Calculation2:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{07CCDF31-37BB-44A2-A4F9-77CCAAB52557}' />
+    </worksheet>
+    <worksheet name='Sheet 4'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Crosstable' name='federated.14oy9ds1m1ajhp13q98ft1t31o0j' />
+          </datasources>
+          <datasource-dependencies datasource='federated.14oy9ds1m1ajhp13q98ft1t31o0j'>
+            <column-instance column='[clnt_age]' derivation='Avg' name='[avg:clnt_age:qk]' pivot='key' type='quantitative' />
+            <column caption='Clnt Age' datatype='real' name='[clnt_age]' role='measure' type='quantitative' />
+            <column caption='First Time' datatype='datetime' name='[first_time]' role='dimension' type='ordinal' />
+            <column caption='Gendr' datatype='string' name='[gendr]' role='dimension' type='nominal' />
+            <column-instance column='[gendr]' derivation='None' name='[none:gendr:nk]' pivot='key' type='nominal' />
+            <column-instance column='[process_step]' derivation='None' name='[none:process_step:nk]' pivot='key' type='nominal' />
+            <column caption='Process Step' datatype='string' name='[process_step]' role='dimension' type='nominal' />
+            <column-instance column='[first_time]' derivation='Year-Trunc' name='[tyr:first_time:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[Exclusions (Gendr,Process Step,YEAR(First Time))]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='crossjoin'>
+                <groupfilter function='level-members' level='[none:gendr:nk]' />
+                <groupfilter function='level-members' level='[none:process_step:nk]' />
+                <groupfilter function='level-members' level='[tyr:first_time:ok]' />
+              </groupfilter>
+              <groupfilter function='reorder-dimensionality'>
+                <groupfilter function='union'>
+                  <groupfilter function='crossjoin'>
+                    <groupfilter function='member' level='[none:gendr:nk]' member='&quot;U&quot;' />
+                    <groupfilter function='crossjoin'>
+                      <groupfilter function='union'>
+                        <groupfilter function='member' level='[tyr:first_time:ok]' member='%null%' />
+                        <groupfilter function='member' level='[tyr:first_time:ok]' member='#2017-01-01 00:00:00#' />
+                      </groupfilter>
+                      <groupfilter function='union'>
+                        <groupfilter function='member' level='[none:process_step:nk]' member='&quot;confirm&quot;' />
+                        <groupfilter function='member' level='[none:process_step:nk]' member='&quot;start&quot;' />
+                        <groupfilter function='member' level='[none:process_step:nk]' member='&quot;step_1&quot;' />
+                        <groupfilter function='member' level='[none:process_step:nk]' member='&quot;step_2&quot;' />
+                        <groupfilter function='member' level='[none:process_step:nk]' member='&quot;step_3&quot;' />
+                      </groupfilter>
+                    </groupfilter>
+                  </groupfilter>
+                  <groupfilter function='crossjoin'>
+                    <groupfilter function='member' level='[none:gendr:nk]' member='&quot;X&quot;' />
+                    <groupfilter function='crossjoin'>
+                      <groupfilter function='union'>
+                        <groupfilter function='member' level='[tyr:first_time:ok]' member='%null%' />
+                        <groupfilter function='member' level='[tyr:first_time:ok]' member='#2017-01-01 00:00:00#' />
+                      </groupfilter>
+                      <groupfilter function='union'>
+                        <groupfilter function='member' level='[none:process_step:nk]' member='&quot;start&quot;' />
+                        <groupfilter function='member' level='[none:process_step:nk]' member='&quot;step_1&quot;' />
+                      </groupfilter>
+                    </groupfilter>
+                  </groupfilter>
+                </groupfilter>
+                <order>
+                  <hierarchy name='[none:gendr:nk]' />
+                  <hierarchy name='[none:process_step:nk]' />
+                  <hierarchy name='[tyr:first_time:ok]' />
+                </order>
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[none:process_step:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[avg:clnt_age:qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[Exclusions (Gendr,Process Step,YEAR(First Time))]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Shape' />
+            <encodings>
+              <color column='[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[none:gendr:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.60000002384185791' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[avg:clnt_age:qk]</rows>
+        <cols>[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[none:process_step:nk]</cols>
+      </table>
+      <simple-id uuid='{39C1D3F0-EE75-4769-9F80-B6D25842605A}' />
+    </worksheet>
+    <worksheet name='Sheet 4 (2)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Crosstable' name='federated.14oy9ds1m1ajhp13q98ft1t31o0j' />
+          </datasources>
+          <datasource-dependencies datasource='federated.14oy9ds1m1ajhp13q98ft1t31o0j'>
+            <column-instance column='[clnt_age]' derivation='Avg' name='[avg:clnt_age:qk]' pivot='key' type='quantitative' />
+            <column caption='Clnt Age' datatype='real' name='[clnt_age]' role='measure' type='quantitative' />
+            <column caption='First Time' datatype='datetime' name='[first_time]' role='dimension' type='ordinal' />
+            <column caption='Gendr' datatype='string' name='[gendr]' role='dimension' type='nominal' />
+            <column-instance column='[gendr]' derivation='None' name='[none:gendr:nk]' pivot='key' type='nominal' />
+            <column-instance column='[process_step]' derivation='None' name='[none:process_step:nk]' pivot='key' type='nominal' />
+            <column caption='Process Step' datatype='string' name='[process_step]' role='dimension' type='nominal' />
+            <column-instance column='[first_time]' derivation='Year-Trunc' name='[tyr:first_time:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[Exclusions (Gendr,Process Step,YEAR(First Time))]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='crossjoin'>
+                <groupfilter function='level-members' level='[none:gendr:nk]' />
+                <groupfilter function='level-members' level='[none:process_step:nk]' />
+                <groupfilter function='level-members' level='[tyr:first_time:ok]' />
+              </groupfilter>
+              <groupfilter function='reorder-dimensionality'>
+                <groupfilter function='union'>
+                  <groupfilter function='crossjoin'>
+                    <groupfilter function='member' level='[none:gendr:nk]' member='&quot;U&quot;' />
+                    <groupfilter function='crossjoin'>
+                      <groupfilter function='union'>
+                        <groupfilter function='member' level='[tyr:first_time:ok]' member='%null%' />
+                        <groupfilter function='member' level='[tyr:first_time:ok]' member='#2017-01-01 00:00:00#' />
+                      </groupfilter>
+                      <groupfilter function='union'>
+                        <groupfilter function='member' level='[none:process_step:nk]' member='&quot;confirm&quot;' />
+                        <groupfilter function='member' level='[none:process_step:nk]' member='&quot;start&quot;' />
+                        <groupfilter function='member' level='[none:process_step:nk]' member='&quot;step_1&quot;' />
+                        <groupfilter function='member' level='[none:process_step:nk]' member='&quot;step_2&quot;' />
+                        <groupfilter function='member' level='[none:process_step:nk]' member='&quot;step_3&quot;' />
+                      </groupfilter>
+                    </groupfilter>
+                  </groupfilter>
+                  <groupfilter function='crossjoin'>
+                    <groupfilter function='member' level='[none:gendr:nk]' member='&quot;X&quot;' />
+                    <groupfilter function='crossjoin'>
+                      <groupfilter function='union'>
+                        <groupfilter function='member' level='[tyr:first_time:ok]' member='%null%' />
+                        <groupfilter function='member' level='[tyr:first_time:ok]' member='#2017-01-01 00:00:00#' />
+                      </groupfilter>
+                      <groupfilter function='union'>
+                        <groupfilter function='member' level='[none:process_step:nk]' member='&quot;start&quot;' />
+                        <groupfilter function='member' level='[none:process_step:nk]' member='&quot;step_1&quot;' />
+                      </groupfilter>
+                    </groupfilter>
+                  </groupfilter>
+                </groupfilter>
+                <order>
+                  <hierarchy name='[none:gendr:nk]' />
+                  <hierarchy name='[none:process_step:nk]' />
+                  <hierarchy name='[tyr:first_time:ok]' />
+                </order>
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[Exclusions (Gendr,Process Step,YEAR(First Time))]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[none:process_step:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[avg:clnt_age:qk]</rows>
+        <cols>([federated.14oy9ds1m1ajhp13q98ft1t31o0j].[none:gendr:nk] / [federated.14oy9ds1m1ajhp13q98ft1t31o0j].[none:process_step:nk])</cols>
+      </table>
+      <simple-id uuid='{D7CAD22B-B27B-478A-9164-8AFDDA27FEBD}' />
+    </worksheet>
+    <worksheet name='Test Step Rates'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Crosstable' name='federated.14oy9ds1m1ajhp13q98ft1t31o0j' />
+          </datasources>
+          <datasource-dependencies datasource='federated.14oy9ds1m1ajhp13q98ft1t31o0j'>
+            <column caption='Client ID percent total' datatype='real' default-format='p0.00%' name='[Calculation2]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([client_id]) / TOTAL(COUNTD([client_id]))'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='string' name='[Variation]' role='dimension' type='nominal' />
+            <column caption='Client Id' datatype='integer' name='[client_id]' role='dimension' type='ordinal' />
+            <column-instance column='[client_id]' derivation='CountD' name='[ctd:client_id:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[visitor_id]' derivation='CountD' name='[ctd:visitor_id:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Variation]' derivation='None' name='[none:Variation:nk]' pivot='key' type='nominal' />
+            <column-instance column='[process_step]' derivation='None' name='[none:process_step:nk]' pivot='key' type='nominal' />
+            <column caption='Process Step' datatype='string' name='[process_step]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation2]' derivation='User' name='[usr:Calculation2:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+            </column-instance>
+            <column caption='Visitor Id' datatype='string' name='[visitor_id]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[none:Variation:nk]'>
+            <groupfilter function='member' level='[none:Variation:nk]' member='&quot;Test&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[none:Variation:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[ctd:client_id:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+            <encoding attr='size-bar' field='[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[usr:Calculation2:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[ctd:visitor_id:qk]' />
+              <color column='[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[ctd:client_id:qk]' />
+              <text column='[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[none:process_step:nk]' />
+              <text column='[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[usr:Calculation2:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{0B2DFBEA-F549-4148-97CE-98E27DFAE64B}' />
+    </worksheet>
+    <worksheet name='testXcontrlXcross'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Crosstable' name='federated.14oy9ds1m1ajhp13q98ft1t31o0j' />
+          </datasources>
+          <datasource-dependencies datasource='federated.14oy9ds1m1ajhp13q98ft1t31o0j'>
+            <column datatype='string' name='[Variation]' role='dimension' type='nominal' />
+            <column caption='Client Id' datatype='integer' name='[client_id]' role='dimension' type='ordinal' />
+            <column-instance column='[Variation]' derivation='None' name='[none:Variation:nk]' pivot='key' type='nominal' />
+            <column-instance column='[process_step]' derivation='None' name='[none:process_step:nk]' pivot='key' type='nominal' />
+            <column-instance column='[client_id]' derivation='CountD' name='[pcto:ctd:client_id:qk:1]' pivot='key' type='quantitative'>
+              <table-calc ordering-field='[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[none:process_step:nk]' ordering-type='Field' type='PctTotal' />
+            </column-instance>
+            <column caption='Process Step' datatype='string' name='[process_step]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[none:process_step:nk]' kind='hide'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:process_step:nk]' />
+              <groupfilter function='union'>
+                <groupfilter function='member' level='[none:process_step:nk]' member='&quot;start&quot;' />
+                <groupfilter function='member' level='[none:process_step:nk]' member='&quot;step_1&quot;' />
+                <groupfilter function='member' level='[none:process_step:nk]' member='&quot;step_2&quot;' />
+                <groupfilter function='member' level='[none:process_step:nk]' member='&quot;step_3&quot;' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[pcto:ctd:client_id:qk:1]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <color column='[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[pcto:ctd:client_id:qk:1]' />
+              <text column='[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[pcto:ctd:client_id:qk:1]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='has-stroke' value='false' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.14oy9ds1m1ajhp13q98ft1t31o0j].[none:process_step:nk] / [federated.14oy9ds1m1ajhp13q98ft1t31o0j].[none:Variation:nk])</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{1784BBDE-0402-40D9-9E11-C295C252F567}' />
+    </worksheet>
+    <worksheet name='testXcontrol'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Crosstable' name='federated.14oy9ds1m1ajhp13q98ft1t31o0j' />
+          </datasources>
+          <datasource-dependencies datasource='federated.14oy9ds1m1ajhp13q98ft1t31o0j'>
+            <column datatype='string' name='[Variation]' role='dimension' type='nominal' />
+            <column caption='Client Id' datatype='integer' name='[client_id]' role='dimension' type='ordinal' />
+            <column-instance column='[Variation]' derivation='None' name='[none:Variation:nk]' pivot='key' type='nominal' />
+            <column-instance column='[process_step]' derivation='None' name='[none:process_step:nk]' pivot='key' type='nominal' />
+            <column-instance column='[client_id]' derivation='CountD' name='[pcto:ctd:client_id:qk:1]' pivot='key' type='quantitative'>
+              <table-calc ordering-field='[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[none:process_step:nk]' ordering-type='Field' type='PctTotal' />
+            </column-instance>
+            <column caption='Process Step' datatype='string' name='[process_step]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[none:process_step:nk]' kind='hide'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:process_step:nk]' />
+              <groupfilter function='union'>
+                <groupfilter function='member' level='[none:process_step:nk]' member='&quot;start&quot;' />
+                <groupfilter function='member' level='[none:process_step:nk]' member='&quot;step_1&quot;' />
+                <groupfilter function='member' level='[none:process_step:nk]' member='&quot;step_2&quot;' />
+                <groupfilter function='member' level='[none:process_step:nk]' member='&quot;step_3&quot;' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[none:Variation:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[pcto:ctd:client_id:qk:1]</rows>
+        <cols>([federated.14oy9ds1m1ajhp13q98ft1t31o0j].[none:process_step:nk] / [federated.14oy9ds1m1ajhp13q98ft1t31o0j].[none:Variation:nk])</cols>
+      </table>
+      <simple-id uuid='{F46D857E-97A9-4A31-A416-3182112FD49C}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='Test Step Rates'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[ctd:client_id:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{9848B7C7-42ED-4885-8C14-F169AF5152D2}' />
+    </window>
+    <window class='worksheet' name='Control Step Rates'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[ctd:client_id:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{E59D399C-C1EB-465D-8505-51F157BEEE06}' />
+    </window>
+    <window class='worksheet' name='testXcontrol'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[none:Variation:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{132A7B0E-E048-4B2C-970B-74A700ECC517}' />
+    </window>
+    <window class='worksheet' name='testXcontrlXcross'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[pcto:ctd:client_id:qk:1]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{640C5966-8BAB-4121-B4CC-DDAF4B00A1C7}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 4'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[none:gendr:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{204A819B-2576-42FD-8161-EA58BF544CE7}' />
+    </window>
+    <window class='worksheet' name='Sheet 4 (2)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.14oy9ds1m1ajhp13q98ft1t31o0j].[none:process_step:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{90E5AF31-1FD5-4BEC-8247-DF8F32989767}' />
+    </window>
+  </windows>
+</workbook>
